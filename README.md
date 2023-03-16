@@ -3,6 +3,7 @@ Title: TBD
 Description: TBD  
 
 Status: Building basic scripts and movement controls.  
+
 ### Movement Controls
-### Credits
+### The Team
 ### Other Work
