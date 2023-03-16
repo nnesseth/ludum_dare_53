@@ -11,7 +11,7 @@ public class AnObject
     // Default constructor
     public AnObject()
     {
-        message = "AnObject.SayHello()";
+        message = "Called from AnObject.SayHello()";
     }
 
     // Overloaded constructor in case a message is specificed
