@@ -10,6 +10,6 @@ public static class StaticClass
     // To get this method called outside this class, make it public.
     public static void HelloWurld()
     {
-        Debug.Log("StaticClass.HelloWurld");
+        Debug.Log("Called from StaticClass.HelloWurld()");
     }
 }
