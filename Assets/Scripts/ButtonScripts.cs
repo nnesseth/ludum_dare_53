@@ -7,7 +7,7 @@ public class ButtonScripts : MonoBehaviour
 {
     public void StartButton()
     {
-        SceneManager.LoadScene("movementTestScene"); // Add scenes to build settings to work
+        SceneManager.LoadScene("MovementTest"); // Add scenes to build settings to work
     }
     public void OptionsButton()
     {
