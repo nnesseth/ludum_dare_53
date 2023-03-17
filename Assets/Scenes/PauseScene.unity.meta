@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/PauseScene.unity.meta
+guid: 56886c999a9294ca28880aa1f62cd8ab
+=======
 guid: 53ef8b2e66fd439498488c5d1f69ef70
+>>>>>>> main:Assets/Scenes/SampleScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

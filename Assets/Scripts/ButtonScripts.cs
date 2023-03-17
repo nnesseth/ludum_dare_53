@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScripts : MonoBehaviour
 {
+    public static bool isPaused;
+    string sceneName;
+    string capturedScene;
+
     public void StartButton()
     {
         SceneManager.LoadScene("MovementTest"); // Add scenes to build settings to work
@@ -22,13 +26,45 @@ public class ButtonScripts : MonoBehaviour
         Application.Quit(); // works in built product but on play mode
         UnityEditor.EditorApplication.isPlaying = false; // closes play mode
     }
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
+    //! Need to create a resume button and restart button
+    public void PauseButton(string x)
+    {
+        SceneManager.LoadScene("PauseScene");
+        isPaused = true;
+        capturedScene = x;
+        Pause(capturedScene);
+    }
+    public void ResumeButton()
+    {
+        SceneManager.LoadScene("movementTestScene");
+        isPaused = false;
+    }
+
+    public void Pause(string x)
+    {  
+        if (isPaused && x != "PauseScene")
+        {
+            //! movement logic next
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            ResumeButton();
+        }
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) // Close game when esc is pressed
+        if (Input.GetKeyDown(KeyCode.Escape)) // Pause game when esc is pressed
         {
-            Application.Quit(); // works in built product but on play mode
-            UnityEditor.EditorApplication.isPlaying = false; // closes play mode
+            Scene currentScene = SceneManager.GetActiveScene ();
+            sceneName = currentScene.name;
+            PauseButton(sceneName);
         }
     }
 }
