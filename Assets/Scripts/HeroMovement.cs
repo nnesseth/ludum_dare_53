@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class HeroMovement : MonoBehaviour
 {
     public float velocity = 5f; // movement speed
