@@ -30,7 +30,6 @@ public class ButtonScripts : MonoBehaviour
     {
         SceneManager.LoadScene("StartScene");
     }
-    //! Need to create a resume button and restart button
     public void PauseButton(string x)
     {
         SceneManager.LoadScene("PauseScene");
