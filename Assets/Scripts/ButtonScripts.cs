@@ -11,15 +11,15 @@ public class ButtonScripts : MonoBehaviour
 
     public void StartButton()
     {
-        SceneManager.LoadScene("movementTestScene"); // Add scenes to build settings to work
+        SceneManager.LoadScene("MovementTest"); // Add scenes to build settings to work
     }
     public void OptionsButton()
     {
-        SceneManager.LoadScene("OptionsScene");
+        SceneManager.LoadScene("OptionsMenu");
     }
     public void CreditsButton()
     {
-        SceneManager.LoadScene("CreditsScene");
+        SceneManager.LoadScene("Credits");
     }
     public void ExitButton()
     {
