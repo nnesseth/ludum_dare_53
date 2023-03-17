@@ -11,11 +11,11 @@ public class ButtonScripts : MonoBehaviour
     }
     public void OptionsButton()
     {
-        SceneManager.LoadScene("OptionsScene");
+        SceneManager.LoadScene("OptionsMenu");
     }
     public void CreditsButton()
     {
-        SceneManager.LoadScene("CreditsScene");
+        SceneManager.LoadScene("Credits");
     }
     public void ExitButton()
     {
