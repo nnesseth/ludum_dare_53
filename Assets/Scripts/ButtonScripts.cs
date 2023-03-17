@@ -7,7 +7,7 @@ public class ButtonScripts : MonoBehaviour
 {
     public static bool isPaused;
     string sceneName;
-    string resumeScene;
+    string capturedScene;
 
     public void StartButton()
     {
@@ -35,27 +35,26 @@ public class ButtonScripts : MonoBehaviour
     {
         SceneManager.LoadScene("PauseScene");
         isPaused = true;
-        Debug.Log(x + " is paused");
-        Pause();
+        capturedScene = x;
+        Pause(capturedScene);
     }
     public void ResumeButton()
     {
         SceneManager.LoadScene("movementTestScene");
         isPaused = false;
-        Debug.Log(isPaused);
-        Pause();
     }
 
     public void Pause(string x)
     {  
-        if (isPaused)
+        if (isPaused && x != "PauseScene")
         {
-            
+            //! movement logic next
             Time.timeScale = 0f;
         }
         else
         {
             Time.timeScale = 1f;
+            ResumeButton();
         }
     }
 
