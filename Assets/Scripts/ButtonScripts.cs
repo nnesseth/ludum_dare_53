@@ -12,6 +12,7 @@ public class ButtonScripts : MonoBehaviour
 
     string sceneName;
     string capturedScene;
+    int sceneIndex;
 
     public void StartButton()
     {
@@ -36,14 +37,20 @@ public class ButtonScripts : MonoBehaviour
     }
     public void PauseButton(string x)
     {
-        SceneManager.LoadScene("PauseMenu");
+        // SceneManager.LoadScene("PauseMenu");
+        SceneManager.LoadSceneAsync("PauseMenu", LoadSceneMode.Additive);
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log(sceneIndex);
+        
+        
         isPaused = true;
         capturedScene = x;
         Pause(capturedScene);
     }
     public void ResumeButton(string x)
     {
-        SceneManager.LoadScene("MovementTest");
+        // SceneManager.LoadScene("MovementTest");
+        SceneManager.UnloadSceneAsync("PauseMenu");
         isPaused = false;
         capturedScene = x;
         Pause(capturedScene);
@@ -53,8 +60,6 @@ public class ButtonScripts : MonoBehaviour
     {   
         if (isPaused && x != "PauseMenu")
         {
-            //! movement logic next
-            //! needs to pause not reset
             Time.timeScale = 0f;
            
         }
@@ -68,13 +73,12 @@ public class ButtonScripts : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape)) // Pause game when esc is pressed
         {  
-            realTime = Time.realtimeSinceStartup;
-            buttonCd -= realTime;
-            Debug.Log(buttonCd + " " + realTime);
-            Scene currentScene = SceneManager.GetActiveScene ();
-            sceneName = currentScene.name;
-            Debug.Log(sceneName);
-            if (sceneName != "PauseMenu" && sceneName != "StartMenu" )
+            // realTime = Time.realtimeSinceStartup; //! Still working on buttoncd stuff to get pause to work more smoothly
+            // buttonCd -= realTime;
+            // Debug.Log(buttonCd + " " + realTime);
+            Scene currentScene = SceneManager.GetSceneByName ("PauseMenu");
+            Debug.Log(currentScene.name);
+            if (currentScene.name != "PauseMenu")
             {
                 PauseButton(sceneName);
             }
