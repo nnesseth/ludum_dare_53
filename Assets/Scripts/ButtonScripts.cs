@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class ButtonScripts : MonoBehaviour
 {
     public static bool isPaused;
+
+    float realTime;
+    float buttonCd = 10;
+
     string sceneName;
     string capturedScene;
 
@@ -28,42 +32,62 @@ public class ButtonScripts : MonoBehaviour
     }
     public void MainMenuButton()
     {
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene("StartMenu");
     }
     public void PauseButton(string x)
     {
-        SceneManager.LoadScene("PauseScene");
+        SceneManager.LoadScene("PauseMenu");
         isPaused = true;
         capturedScene = x;
         Pause(capturedScene);
     }
-    public void ResumeButton()
+    public void ResumeButton(string x)
     {
-        SceneManager.LoadScene("movementTestScene");
+        SceneManager.LoadScene("MovementTest");
         isPaused = false;
+        capturedScene = x;
+        Pause(capturedScene);
     }
 
     public void Pause(string x)
-    {  
-        if (isPaused && x != "PauseScene")
+    {   
+        if (isPaused && x != "PauseMenu")
         {
             //! movement logic next
+            //! needs to pause not reset
             Time.timeScale = 0f;
+           
         }
         else
         {
             Time.timeScale = 1f;
-            ResumeButton();
         }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) // Pause game when esc is pressed
-        {
+        if (Input.GetKeyUp(KeyCode.Escape)) // Pause game when esc is pressed
+        {  
+            realTime = Time.realtimeSinceStartup;
+            buttonCd -= realTime;
+            Debug.Log(buttonCd + " " + realTime);
             Scene currentScene = SceneManager.GetActiveScene ();
             sceneName = currentScene.name;
-            PauseButton(sceneName);
+            Debug.Log(sceneName);
+            if (sceneName != "PauseMenu" && sceneName != "StartMenu" )
+            {
+                PauseButton(sceneName);
+            }
+            else if (sceneName == "StartMenu")
+            {
+                return;
+            }
+            else
+            {
+                ResumeButton(sceneName);
+
+            }
+          
         }
     }
 }
