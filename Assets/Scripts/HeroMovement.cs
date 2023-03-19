@@ -12,6 +12,7 @@ public class HeroMovement : MonoBehaviour
     private float forwardInput;
     private Rigidbody heroRb;
 
+
     void Start()
     {
         heroRb = GetComponent<Rigidbody>();
