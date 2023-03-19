@@ -12,15 +12,6 @@ public class HeroMovement : MonoBehaviour
     private float forwardInput;
     private Rigidbody heroRb;
 
-    void Awake()
-    {
-        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
-    }
-
-    void OnDestroy() 
-    {
-        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
-    }
 
     void Start()
     {
@@ -42,12 +33,6 @@ public class HeroMovement : MonoBehaviour
             heroRb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
             onFloor = false; // Impulse adds instant force.
         }
-    }
-
-    private void OnGameStateChanged(GameState newGameState)
-    {
-        enabled = newGameState == GameState.Gameplay;
-        Debug.Log(enabled);
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -1,17 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
- 
+using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+
 public class PauseController : MonoBehaviour
 {
+    //* This will go on the hero object
+
+    public UnityEvent GamePaused;
+    public UnityEvent GameResumed;
+
+
+
+
+    private bool isPaused;
+    void Start()
+    {
+
+    }
+
+    //* If we need to worry about animation this can be done using unscaled time.
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameState currentGameState = GameStateManager.Instance.CurrentGameState;
-            GameState newGameState = currentGameState == GameState.Gameplay
-                ? GameState.Paused
-                : GameState.Gameplay;
- 
-            GameStateManager.Instance.SetState(newGameState);
+            isPaused = !isPaused;
+
+            if(isPaused)
+            {
+                Time.timeScale = 0;
+                GamePaused.Invoke();
+                SceneManager.LoadSceneAsync("PauseMenu", LoadSceneMode.Additive);
+            }
+            else 
+            {
+                Time.timeScale = 1;
+                GameResumed.Invoke();
+                SceneManager.UnloadSceneAsync("PauseMenu");
+                
+            }
         }
     }
 }

@@ -5,19 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScripts : MonoBehaviour
 {
-    public static bool isPaused;
 
-    public GameState CurrentGameState { get;}
 
-    void Awake()
-    {
-        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
-    }
-
-    void OnDestroy() 
-    {
-        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
-    }
 
     public void StartButton()
     {
@@ -39,28 +28,5 @@ public class ButtonScripts : MonoBehaviour
     public void MainMenuButton()
     {
         SceneManager.LoadScene("StartMenu");
-    }
-    public void PauseGame()
-    {
-        SceneManager.LoadSceneAsync("PauseMenu", LoadSceneMode.Additive);
-    }
-    public void ResumeButton()
-    {
-        SceneManager.UnloadSceneAsync("PauseMenu");
-    }
-
-    private void OnGameStateChanged(GameState newGameState)
-    {
-        enabled = newGameState == GameState;
-    }
-
-    void Update()
-    {
-        Debug.Log(CurrentGameState);
-        // if (CurrentGameState == GameState.Paused)
-        // {
-        //    PauseGame();
-        // }
-        // if (CurrentGameState == GameState.)
     }
 }

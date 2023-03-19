@@ -593,9 +593,10 @@ GameObject:
   - component: {fileID: 817487472}
   - component: {fileID: 817487471}
   - component: {fileID: 817487470}
+  - component: {fileID: 817487473}
   m_Layer: 5
   m_Name: Resume_Button
-  m_TagString: Untagged
+  m_TagString: Resume_Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -664,19 +665,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 817487471}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 115234478}
-        m_TargetAssemblyTypeName: ButtonScripts, Assembly-CSharp
-        m_MethodName: ResumeGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &817487471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,6 +704,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817487468}
   m_CullTransparentMesh: 1
+--- !u!114 &817487473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817487468}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472bf43e97b3ec64b99255803b0f3b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GamePaused:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 817487473}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  GameResumed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 817487473}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &830101401
 GameObject:
   m_ObjectHideFlags: 0
