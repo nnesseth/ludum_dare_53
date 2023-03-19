@@ -7,12 +7,17 @@ public class ButtonScripts : MonoBehaviour
 {
     public static bool isPaused;
 
-    float realTime;
-    float buttonCd = 10;
+    public GameState CurrentGameState { get;}
 
-    string sceneName;
-    string capturedScene;
-    int sceneIndex;
+    void Awake()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    void OnDestroy() 
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
 
     public void StartButton()
     {
@@ -35,63 +40,27 @@ public class ButtonScripts : MonoBehaviour
     {
         SceneManager.LoadScene("StartMenu");
     }
-    public void PauseButton(string x)
+    public void PauseGame()
     {
-        // SceneManager.LoadScene("PauseMenu");
         SceneManager.LoadSceneAsync("PauseMenu", LoadSceneMode.Additive);
-        sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log(sceneIndex);
-        
-        
-        isPaused = true;
-        capturedScene = x;
-        Pause(capturedScene);
     }
-    public void ResumeButton(string x)
+    public void ResumeButton()
     {
-        // SceneManager.LoadScene("MovementTest");
         SceneManager.UnloadSceneAsync("PauseMenu");
-        isPaused = false;
-        capturedScene = x;
-        Pause(capturedScene);
     }
 
-    public void Pause(string x)
-    {   
-        if (isPaused && x != "PauseMenu")
-        {
-            Time.timeScale = 0f;
-           
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        enabled = newGameState == GameState;
     }
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape)) // Pause game when esc is pressed
-        {  
-            // realTime = Time.realtimeSinceStartup; //! Still working on buttoncd stuff to get pause to work more smoothly
-            // buttonCd -= realTime;
-            // Debug.Log(buttonCd + " " + realTime);
-            Scene currentScene = SceneManager.GetSceneByName ("PauseMenu");
-            Debug.Log(currentScene.name);
-            if (currentScene.name != "PauseMenu")
-            {
-                PauseButton(sceneName);
-            }
-            else if (sceneName == "StartMenu")
-            {
-                return;
-            }
-            else
-            {
-                ResumeButton(sceneName);
-
-            }
-          
-        }
+        Debug.Log(CurrentGameState);
+        // if (CurrentGameState == GameState.Paused)
+        // {
+        //    PauseGame();
+        // }
+        // if (CurrentGameState == GameState.)
     }
 }
