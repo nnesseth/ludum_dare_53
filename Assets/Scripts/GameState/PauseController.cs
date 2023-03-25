@@ -24,8 +24,6 @@ public class PauseController : MonoBehaviour
     public void pause()
     {
         isPaused = !isPaused;
-        Debug.Log(isPaused);
-
         if (isPaused)
         {
             Time.timeScale = 0;
