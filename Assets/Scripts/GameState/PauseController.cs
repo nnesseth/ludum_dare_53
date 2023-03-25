@@ -18,7 +18,7 @@ public class PauseController : MonoBehaviour
 
 
 
-    private static bool isPaused;
+    public static bool isPaused;
     void Start()
     {
     }
@@ -33,8 +33,6 @@ public class PauseController : MonoBehaviour
     public void pause()
     {
         isPaused = !isPaused;
-        Debug.Log(isPaused);
-
         if (isPaused)
         {
             Time.timeScale = 0;
