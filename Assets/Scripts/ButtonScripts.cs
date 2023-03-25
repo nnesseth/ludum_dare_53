@@ -5,12 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScripts : MonoBehaviour
 {
-
-
-
     public void StartButton()
     {
-        SceneManager.LoadScene("MovementTest"); // Add scenes to build settings to work
+        SceneManager.LoadScene("MovementTest");
     }
     public void OptionsButton()
     {
@@ -28,5 +25,7 @@ public class ButtonScripts : MonoBehaviour
     public void MainMenuButton()
     {
         SceneManager.LoadScene("StartMenu");
+        Time.timeScale = 1;
+        PauseController.isPaused = false;
     }
 }
