@@ -15,10 +15,29 @@ public class PauseController : MonoBehaviour
 
 
 
-    private bool isPaused;
+    private static bool isPaused;
     void Start()
     {
 
+    }
+
+    public void pause()
+    {
+        isPaused = !isPaused;
+        Debug.Log(isPaused);
+
+        if (isPaused)
+        {
+            Time.timeScale = 0;
+            GamePaused.Invoke();
+            SceneManager.LoadSceneAsync("PauseMenu", LoadSceneMode.Additive);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            GameResumed.Invoke();
+            SceneManager.UnloadSceneAsync("PauseMenu");
+        }
     }
 
     //* If we need to worry about animation this can be done using unscaled time.
@@ -26,21 +45,7 @@ public class PauseController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            isPaused = !isPaused;
-
-            if(isPaused)
-            {
-                Time.timeScale = 0;
-                GamePaused.Invoke();
-                SceneManager.LoadSceneAsync("PauseMenu", LoadSceneMode.Additive);
-            }
-            else 
-            {
-                Time.timeScale = 1;
-                GameResumed.Invoke();
-                SceneManager.UnloadSceneAsync("PauseMenu");
-                
-            }
+            pause();
         }
     }
 }

@@ -41,5 +41,5 @@ public class HeroMovement : MonoBehaviour
         {
             onFloor = true;
         }
-    }    
+    }
 }
