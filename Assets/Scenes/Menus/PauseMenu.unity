@@ -668,7 +668,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 817487473}
         m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
-        m_MethodName: pause
+        m_MethodName: resumeClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -746,6 +746,7 @@ MonoBehaviour:
   GameResumed:
     m_PersistentCalls:
       m_Calls: []
+  player: {fileID: 0}
 --- !u!1 &830101401
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,18 +12,29 @@ public class PauseController : MonoBehaviour
     public UnityEvent GamePaused;
     public UnityEvent GameResumed;
 
+    public GameObject Player;
+
+
 
 
 
     private static bool isPaused;
     void Start()
     {
-
     }
-
+    public void resumeClick()
+    {
+        Player = GameObject.FindWithTag("Player");
+        Time.timeScale = 1;
+        Player.GetComponent<PauseController>().GameResumed.Invoke();
+        SceneManager.UnloadSceneAsync("PauseMenu");
+        isPaused = false;
+    }
     public void pause()
     {
         isPaused = !isPaused;
+        Debug.Log(isPaused);
+
         if (isPaused)
         {
             Time.timeScale = 0;

@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 610188417}
   m_Layer: 6
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -391,6 +391,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  Player: {fileID: 0}
 --- !u!1 &1132069473
 GameObject:
   m_ObjectHideFlags: 0
