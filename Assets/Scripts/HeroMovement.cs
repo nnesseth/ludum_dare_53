@@ -12,6 +12,9 @@ public class HeroMovement : MonoBehaviour
     private float forwardInput;
     private Rigidbody heroRb;
 
+    [SerializeField]
+    private Transform cameraTransform;
+
 
     void Start()
     {
