@@ -14,11 +14,8 @@ public class PauseController : MonoBehaviour
 
     public GameObject Player;
 
-
-
-
-
     public static bool isPaused;
+    
     void Start()
     {
     }
