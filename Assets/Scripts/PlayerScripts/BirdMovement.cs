@@ -5,30 +5,12 @@ using UnityEngine;
 public class BirdMovement : MonoBehaviour
 {
     [SerializeField]
-    float thrust, thrustMultiplier, yawMultiplier, pitchMultiplier;
-
-    new Rigidbody rigidbody;
-
-    void Awake()
-    {
-        rigidbody = GetComponent<Rigidbody>();
-    }
+    private float forwardMovement = 5;
 
     void FixedUpdate()
     {
-        float pitch = Input.GetAxis("Vertical");
-        float yaw = Input.GetAxis("Horizontal");
-
-        rigidbody.AddRelativeForce(0f, thrust * thrustMultiplier * Time.deltaTime, 0f);
-    }
-    void Start()
-    {
-
+        transform.Translate(Vector3.forward * Time.deltaTime * forwardMovement, Space.World);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
 }
