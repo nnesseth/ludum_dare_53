@@ -265,36 +265,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Raven-in-Flight_with_Letter
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 8b58a36b10d36314189554809e6bdc4a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c8094a41af347e4439dde873fc56a484, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b58a36b10d36314189554809e6bdc4a, type: 3}
---- !u!1 &8624512684327690412 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b58a36b10d36314189554809e6bdc4a, type: 3}
-  m_PrefabInstance: {fileID: 8894896539827101181}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &8944889517363620096
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8624512684327690412}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 8b58a36b10d36314189554809e6bdc4a, type: 3}
-  m_Controller: {fileID: 9100000, guid: c8094a41af347e4439dde873fc56a484, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!4 &9005998845280369174 stripped
+--- !u!4 &2325887126708032547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b58a36b10d36314189554809e6bdc4a, type: 3}
-  m_PrefabInstance: {fileID: 8894896539827101181}
+  m_PrefabInstance: {fileID: 2868106290673710024}
   m_PrefabAsset: {fileID: 0}
