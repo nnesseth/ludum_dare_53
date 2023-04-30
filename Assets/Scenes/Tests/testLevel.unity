@@ -444,6 +444,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7addc69c60961a34b951e03a9e87db10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 3
+--- !u!4 &703238972 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3547288604189127856, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+  m_PrefabInstance: {fileID: 707192186}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &707192186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -513,11 +519,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
---- !u!4 &981534596 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3144604430653886895, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
-  m_PrefabInstance: {fileID: 707192186}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1081981880
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,9 +803,9 @@ MonoBehaviour:
   range: 10
   lastFire: 0
   arrow: {fileID: 4818147459619203715, guid: 7bdaca415dfc5894091a7581a32e7183, type: 3}
-  target: {fileID: 981534596}
+  target: {fileID: 703238972}
   moveDirection: {x: 0, y: 0, z: 0}
-  thrust: 20
+  thrust: 40
 --- !u!23 &1605002839
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1431,6 +1432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7addc69c60961a34b951e03a9e87db10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 3
 --- !u!1 &1753023708
 GameObject:
   m_ObjectHideFlags: 0
