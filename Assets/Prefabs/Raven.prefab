@@ -64,7 +64,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5256325931512178368}
+  - {fileID: 9005998845280369174}
   - {fileID: 3547288604189127856}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -81,6 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7addc69c60961a34b951e03a9e87db10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 3
 --- !u!114 &891471809819069110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +210,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4334401034589586311}
   m_Enabled: 1
---- !u!1001 &5726469762281128235
+--- !u!1001 &8894896539827101181
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
