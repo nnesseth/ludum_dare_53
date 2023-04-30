@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    // [SerializeField]
-    // private float shotDelay = 100;
-
     [SerializeField]
     public float arrowSpeed = 10;
 
@@ -22,6 +19,9 @@ public class EnemyMovement : MonoBehaviour
     public Transform target;
     public Transform ArrowSpawner;
     public Vector3 moveDirection;
+    private Vector3 force;
+    private ForceMode forceMode;
+    public float thrust = 20f;
 
     void Start()
     {
@@ -31,24 +31,28 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(transform.position, target.position);
+        print(distance+"this is distance");
         if (distance <= range && Time.time - lastFire >= reloadTimer)
         {
             ShootArrow();
             lastFire = Time.time;
         }
-
-        Vector3 direction = transform.position - target.position;
+        // ShootArrow();
+        Vector3 direction = target.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 25f);
     }
 
     void ShootArrow()
     {
+        force = transform.forward * thrust;
+        forceMode = ForceMode.Impulse;
 
         var arrowObj = Instantiate(arrow, transform.position, transform.rotation);
-        // arrowObj.Velocity = Vector3.forward * arrowSpeed;
-        arrowObj.GetComponent<Rigidbody>().velocity = Vector3.forward * arrowSpeed; 
-        print("Arrow Speed "+arrowSpeed);
-        print("ArrowSpawner.forward "+ArrowSpawner.forward);
+        arrowObj.GetComponent<Rigidbody>().AddForce(force, forceMode); 
+
+        //arrowObj.Velocity = Vector3.forward * arrowSpeed;
+        //print("Arrow Speed "+arrowSpeed);
+        //print("ArrowSpawner.forward "+ArrowSpawner.forward);
     }
 }
