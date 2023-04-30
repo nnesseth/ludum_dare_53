@@ -15,12 +15,6 @@ public class ArrowSpawner : MonoBehaviour
     private Vector3 force;
     private ForceMode forceMode;
     public float thrust = 20f;
-    //public Quaternion arrowRotation;
-
-    void Start()
-    {
-
-    }
 
     void Update()
     {
@@ -31,8 +25,6 @@ public class ArrowSpawner : MonoBehaviour
             ShootArrow();
             lastFire = Time.time;
         }
-
-        // ShootArrow();
         Vector3 direction = target.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 25f);
@@ -42,13 +34,8 @@ public class ArrowSpawner : MonoBehaviour
     {
         force = transform.forward * thrust;
         forceMode = ForceMode.Impulse;
-        //arrowRotation = Quaternion.Euler(Vector3.forward);
-
         var arrowObj = Instantiate(arrow, transform.position, transform.rotation);
         arrowObj.GetComponent<Rigidbody>().AddForce(force, forceMode);
-
-        //arrowObj.Velocity = Vector3.forward * arrowSpeed;
-        //print("Arrow Speed "+arrowSpeed);
-        //print("ArrowSpawner.forward "+ArrowSpawner.forward);
+        Destroy(arrowObj, 5);
     }
 }
