@@ -26,7 +26,6 @@ public class GameOver : MonoBehaviour
         if (obj.gameObject.name == "Arrow" && objectHit.name == "Raven")
         {
             health -= 1;
-            print(health);
             if(health <= 0)
             {
                 SceneManager.LoadScene("Credits");
