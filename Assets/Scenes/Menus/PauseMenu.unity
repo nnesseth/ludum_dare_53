@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.6472719, b: 0.8490566, a: 1}
+  m_Color: {r: 0, g: 0.6472719, b: 0.8490566, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -746,7 +746,7 @@ MonoBehaviour:
   GameResumed:
     m_PersistentCalls:
       m_Calls: []
-  player: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &830101401
 GameObject:
   m_ObjectHideFlags: 0
