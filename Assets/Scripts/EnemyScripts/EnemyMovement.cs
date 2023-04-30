@@ -8,15 +8,15 @@ public class EnemyMovement : MonoBehaviour
     // private float shotDelay = 100;
 
     [SerializeField]
-    private float arrowSpeed = 10;
+    public float arrowSpeed = 10;
 
     [SerializeField]
-    private float reloadTimer = 0.5f;
+    public float reloadTimer = 0.5f;
 
     [SerializeField]
-    private float range = 10f;
+    public float range = 10f;
 
-    private float lastFire;
+    public float lastFire;
 
     public GameObject arrow;
     public Transform target;
@@ -37,9 +37,9 @@ public class EnemyMovement : MonoBehaviour
             lastFire = Time.time;
         }
 
-        Vector3 direction = target.position - transform.position;
+        Vector3 direction = transform.position - target.position;
         Quaternion rotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 5f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 25f);
     }
 
     void ShootArrow()
