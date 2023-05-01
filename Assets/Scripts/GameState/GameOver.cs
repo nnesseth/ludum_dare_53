@@ -12,7 +12,8 @@ public class GameOver : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider obj) 
-    {
+    { 
+        print(obj);
         if (obj.gameObject.name == "Raven" && objectHit.name == "Cube (8)")
         {
              SceneManager.LoadScene("Credits");
