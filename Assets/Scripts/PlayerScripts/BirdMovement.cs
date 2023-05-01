@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class BirdMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float forwardMovement = 5;
 
     [SerializeField]
     private float strafeSpeed = 5;
 
-    [SerializeField]
-    // private float minTilt = 90;
     
     void FixedUpdate()
     {
