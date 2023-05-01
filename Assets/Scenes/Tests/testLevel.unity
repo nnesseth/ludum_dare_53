@@ -457,6 +457,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1096457770}
+    - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: tracker
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: rotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: rotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: tiltYMultiply
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: forwardMovement
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: tiltXMultiplyer
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: fwdMovmentMultiply
+      value: 37
+      objectReference: {fileID: 0}
     - target: {fileID: 1448831248888547539, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: m_Center.x
       value: 0
@@ -551,6 +583,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1096457770 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3144604430653886895, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+  m_PrefabInstance: {fileID: 707192186}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1126662263
 GameObject:
   m_ObjectHideFlags: 0
