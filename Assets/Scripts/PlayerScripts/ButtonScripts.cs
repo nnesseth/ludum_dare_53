@@ -7,7 +7,7 @@ public class ButtonScripts : MonoBehaviour
 {
     public void StartButton()
     {
-        SceneManager.LoadScene("MovementTest");
+        SceneManager.LoadScene("Intro");
     }
     public void OptionsButton()
     {
@@ -20,7 +20,7 @@ public class ButtonScripts : MonoBehaviour
     public void ExitButton()
     {
         Application.Quit(); // works in built product but on play mode
-        UnityEditor.EditorApplication.isPlaying = false; // closes play mode
+        //UnityEditor.EditorApplication.isPlaying = false; // closes play mode
     }
     public void MainMenuButton()
     {
