@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     private Rigidbody objectHit;
-    public int health = 3;
     void Start()
     {
         objectHit = GetComponent<Rigidbody>();
@@ -14,7 +13,6 @@ public class GameOver : MonoBehaviour
 
     void OnTriggerEnter(Collider obj) 
     {
-        print(objectHit.name);
         if (obj.gameObject.name == "Raven" && objectHit.name == "Cube (8)")
         {
              SceneManager.LoadScene("Credits");
@@ -25,11 +23,7 @@ public class GameOver : MonoBehaviour
         }    
         if (obj.gameObject.name == "Arrow" && objectHit.name == "Raven")
         {
-            health -= 1;
-            if(health <= 0)
-            {
-                SceneManager.LoadScene("Credits");
-            }
+            HealthController.health -= 1;
         }    
     }  
 }
