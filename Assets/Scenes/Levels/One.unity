@@ -244,7 +244,7 @@ TerrainCollider:
   m_Material: {fileID: 0}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 102b7a9bd8fa3ee4399d4b3495f34797, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &87813545
 Terrain:
   m_ObjectHideFlags: 0
@@ -2480,6 +2480,18 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 806080154567202327, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: strafeSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: forwardMovement
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2041144591396618316, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2540,6 +2552,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.671
       objectReference: {fileID: 0}
+    - target: {fileID: 8576108826401243486, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576108826401243486, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
 --- !u!4 &1485406006 stripped
@@ -2559,20 +2579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38004fbe33a699541b41fe303f3d0c77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1485406008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666303135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 029be703e7bdea340b81254c8a761d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forwardMovement: 5
-  strafeSpeed: 5
 --- !u!4 &1513269115 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f16d8a49b4ca70143a019450f2a968ac, type: 3}

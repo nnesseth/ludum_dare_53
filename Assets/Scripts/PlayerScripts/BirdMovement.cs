@@ -15,7 +15,7 @@ public class BirdMovement : MonoBehaviour
     
     void FixedUpdate()
     {
-        transform.position += transform.forward * Time.deltaTime * 5f;
+        transform.position += transform.forward * Time.deltaTime * forwardMovement;
         transform.Rotate(Input.GetAxis("Vertical"), 0.0f, -Input.GetAxis("Horizontal"));
         if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.LeftArrow)))
         {

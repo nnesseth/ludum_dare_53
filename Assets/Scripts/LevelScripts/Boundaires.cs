@@ -7,9 +7,9 @@ public class Boundaires : MonoBehaviour
     [SerializeField]
     private float inLeft, inRight, inTop, inBottom;
 
-    public static float leftSide = -9.3f;
-    public static float rightSide = 9.3f;
-    public static float topSide = 8.5f;
+    public static float leftSide = -100.0f;
+    public static float rightSide = 100.0f;
+    public static float topSide = 20f;
     public static float bottomSide = 2.0f;
 
 
