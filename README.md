@@ -8,12 +8,17 @@ Status: Complete, fixing bugs!
 
 Use the following controls to fly a raven to Odin! Dodge arrows and avoid obstacles. Aim for your perch at the end of the skys.
 
-W - Pitch down
-A - Strafe left
-S - Pitch up
-D - Strafe right
-Q - Roll left
-E - Roll right
+  W - Pitch down  
+
+  A - Strafe left  
+
+  S - Pitch up  
+
+  D - Strafe right  
+
+  Q - Roll left  
+
+  E - Roll right
 
 ### The Team
 ### Other Work
