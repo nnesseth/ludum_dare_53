@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Tests/testLevel.unity
     guid: 430c3520010411a459a88ee1ceed00ba
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Outro.unity
+    guid: d12b8387b7e5ea54b99e81335e020fd4
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Odin.unity
+    guid: f842f3419f4f7ce47949b4330fb0e4f0
+  - enabled: 1
+    path: Assets/Scenes/Levels/Two.unity
+    guid: 674ee4e3f7d107d4db12611b287d61e5
   m_configObjects: {}
