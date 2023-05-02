@@ -18,6 +18,10 @@ public class GameOver : MonoBehaviour
         {
              SceneManager.LoadScene("Odin");
         }
+        if (obj.gameObject.name == "Raven" && objectHit.name == "Tree Perch 2")
+        {
+            SceneManager.LoadScene("Outro");
+        }
         if (obj.gameObject.name == "Raven" && objectHit.name == "volcave")
         {
            SceneManager.LoadScene("testLevel");
