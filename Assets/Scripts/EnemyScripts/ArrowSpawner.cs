@@ -36,6 +36,6 @@ public class ArrowSpawner : MonoBehaviour
         forceMode = ForceMode.Impulse;
         var arrowObj = Instantiate(arrow, transform.position, transform.rotation);
         arrowObj.GetComponent<Rigidbody>().AddForce(force, forceMode);
-        Destroy(arrowObj, 5);
+        // Destroy(arrowObj, 5);
     }
 }
