@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 891471809819069110}
   - component: {fileID: 8576108826401243486}
   - component: {fileID: 806080154567202327}
+  - component: {fileID: 196099501483007364}
+  - component: {fileID: 4600211331597466170}
   m_Layer: 0
   m_Name: Raven
   m_TagString: Untagged
@@ -50,7 +52,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7addc69c60961a34b951e03a9e87db10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
 --- !u!114 &891471809819069110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +64,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029be703e7bdea340b81254c8a761d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardMovement: 5
   strafeSpeed: 5
 --- !u!54 &8576108826401243486
 Rigidbody:
@@ -95,6 +95,49 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7809476972379949977, guid: 8b58a36b10d36314189554809e6bdc4a, type: 3}
+--- !u!114 &196099501483007364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388729185391424983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2005288baf3e6c84f85a20ab61192aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4600211331597466170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388729185391424983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472bf43e97b3ec64b99255803b0f3b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GamePaused:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 029be703e7bdea340b81254c8a761d9f, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  GameResumed:
+    m_PersistentCalls:
+      m_Calls: []
+  Player: {fileID: 0}
 --- !u!1 &4334401034589586311
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ public class PauseController : MonoBehaviour
     {
         Player = GameObject.FindWithTag("Player");
         Time.timeScale = 1;
-        Player.GetComponent<PauseController>().GameResumed.Invoke();
+        GameResumed.Invoke();
         SceneManager.UnloadSceneAsync("PauseMenu");
         isPaused = false;
     }
