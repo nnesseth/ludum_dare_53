@@ -1036,7 +1036,7 @@ Transform:
   - {fileID: 919625317}
   - {fileID: 1930622886}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &427887209
 GameObject:
@@ -1352,6 +1352,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f16d8a49b4ca70143a019450f2a968ac, type: 3}
+--- !u!1001 &752434726
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 808826920441558346, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 808826920441558346, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.111553
+      objectReference: {fileID: 0}
+    - target: {fileID: 808826920441558346, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.832529
+      objectReference: {fileID: 0}
+    - target: {fileID: 808826920441558346, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.395458
+      objectReference: {fileID: 0}
+    - target: {fileID: 808826920441558346, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 808826920441558346, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808826920441558346, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808826920441558346, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808826920441558346, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808826920441558346, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808826920441558346, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2007817594864171519, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
+      propertyPath: m_Name
+      value: Music Flight
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6056030985c164e41b9dc383cd15376d, type: 3}
 --- !u!1 &756783566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,7 +1939,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &973647003
 PrefabInstance:
@@ -2097,7 +2154,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1012403270
 GameObject:
@@ -2253,7 +2310,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1035740641
 MonoBehaviour:
@@ -2706,7 +2763,7 @@ Transform:
   - {fileID: 83609147}
   - {fileID: 1642357807}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1189908326
 GameObject:
@@ -2885,7 +2942,7 @@ Transform:
   - {fileID: 1215854514}
   - {fileID: 977456779}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1352822619 stripped
 Transform:
