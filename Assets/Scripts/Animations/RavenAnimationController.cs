@@ -76,7 +76,7 @@ public class RavenAnimationController : MonoBehaviour
             else if (strafeRight)
                 strafe = Mathf.Clamp(strafe - (Time.deltaTime * animationSpeed), -1f, 1f);
 
-            Debug.Log("Strafe detected: " + strafe);
+            //Debug.Log("Strafe detected: " + strafe);
 
             // Tell the animator to use its blendtree
             strafeSwoop = true;
@@ -97,7 +97,7 @@ public class RavenAnimationController : MonoBehaviour
             else if (rollRight)
                 roll = Mathf.Clamp(roll - (Time.deltaTime * animationSpeed), -1f, 1f);
 
-            Debug.Log("Roll detected: " + roll);
+            //Debug.Log("Roll detected: " + roll);
         }
 
 
@@ -105,7 +105,9 @@ public class RavenAnimationController : MonoBehaviour
         animator.SetFloat(swoopHash, swoop);
         animator.SetFloat(strafeHash, strafe);
         animator.SetFloat(rollHash, roll);
+
+
         animator.SetBool(strafeSwoopHash, strafeSwoop);
     }
 }
-// Disclaimer: this code was written by the artist with help from special guest google -- don't judge pls
+// Disclaimer: this code was written by the artist with help from special guest google 
