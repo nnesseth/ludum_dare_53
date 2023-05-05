@@ -6,10 +6,10 @@ public class BirdMovement : MonoBehaviour
 {
 
     [SerializeField]
-    private float strafeSpeed = 5;
+    private float strafeSpeed = 20;
 
     [SerializeField]
-    private float speed = 5;
+    private float speed = 1500;
 
     private Vector3 dirInput;
     private Rigidbody birdBody;
@@ -21,29 +21,16 @@ public class BirdMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // transform.position += transform.forward * Time.deltaTime * speed;
-        // transform.Rotate(Input.GetAxis("Vertical"), 0.0f, -Input.GetAxis("Horizontal"));
-
-          dirInput = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
-          birdBody.velocity = new Vector3(0, 0, speed * Time.deltaTime);
-         
-          birdBody.MovePosition(transform.position + dirInput * Time.deltaTime * speed);
-        
-        // if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.LeftArrow)))
-        // { 
-        //     transform.Translate(Vector3.left * Time.deltaTime * strafeSpeed); 
-        // }
-        // if (Input.GetKey(KeyCode.D) || (Input.GetKey(KeyCode.RightArrow)))
-        // {
-        //     transform.Translate(Vector3.left * Time.deltaTime * strafeSpeed * -1);
-        // }
-        // if (Input.GetKey(KeyCode.W) || (Input.GetKey(KeyCode.UpArrow)))
-        // {
-        //    transform.position += Vector3.up *  Time.deltaTime * strafeSpeed;
-        // }
-        // if (Input.GetKey(KeyCode.S) || (Input.GetKey(KeyCode.DownArrow)))
-        // {
-        //     transform.position += Vector3.down * Time.deltaTime * strafeSpeed;   
-        // }
+        //   dirInput = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+          birdBody.velocity = new Vector3(0, 0, speed * Time.deltaTime); 
+          if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.LeftArrow)))
+          {
+            birdBody.velocity = new Vector3(-speed * Time.deltaTime, 0, 0); 
+          }
+          if(Input.GetKey(KeyCode.D) || (Input.GetKey(KeyCode.RightArrow)))
+          {
+            birdBody.velocity = new Vector3(speed * Time.deltaTime, 0, 0); 
+          }
+        //   birdBody.MovePosition(transform.position + dirInput * Time.deltaTime * strafeSpeed);
     }
 }
