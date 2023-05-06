@@ -9,7 +9,7 @@ public class BirdMovement : MonoBehaviour
     private float strafeSpeed = 20000;
 
     [SerializeField]
-    private float speed = 200000;
+    private float speed = 2000000;
 
     [SerializeField]
     ForceMode mode;
