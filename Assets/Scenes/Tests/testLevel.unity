@@ -488,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: speed
-      value: 50000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: target
@@ -508,7 +508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: strafeSpeed
-      value: 50000
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: tiltYMultiply
@@ -588,7 +588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8576108826401243486, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: m_Drag
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8576108826401243486, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: m_IsKinematic
