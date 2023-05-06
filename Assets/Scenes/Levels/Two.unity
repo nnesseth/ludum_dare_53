@@ -1360,7 +1360,7 @@ MonoBehaviour:
   range: 100
   lastFire: 0
   arrow: {fileID: 4818147459619203715, guid: 7bdaca415dfc5894091a7581a32e7183, type: 3}
-  target: {fileID: 0}
+  target: {fileID: 1083434680}
   moveDirection: {x: 0, y: 0, z: 0}
   thrust: 20
 --- !u!1 &594215069
@@ -3560,7 +3560,7 @@ MonoBehaviour:
   range: 100
   lastFire: 0
   arrow: {fileID: 4818147459619203715, guid: 7bdaca415dfc5894091a7581a32e7183, type: 3}
-  target: {fileID: 0}
+  target: {fileID: 1083434680}
   moveDirection: {x: 0, y: 0, z: 0}
   thrust: 20
 --- !u!1 &1413918801
@@ -4238,7 +4238,7 @@ MonoBehaviour:
   range: 100
   lastFire: 0
   arrow: {fileID: 4818147459619203715, guid: 7bdaca415dfc5894091a7581a32e7183, type: 3}
-  target: {fileID: 0}
+  target: {fileID: 1083434680}
   moveDirection: {x: 0, y: 0, z: 0}
   thrust: 20
 --- !u!1001 &1800823365
@@ -4770,7 +4770,7 @@ MonoBehaviour:
   range: 100
   lastFire: 0
   arrow: {fileID: 4818147459619203715, guid: 7bdaca415dfc5894091a7581a32e7183, type: 3}
-  target: {fileID: 0}
+  target: {fileID: 1083434680}
   moveDirection: {x: 0, y: 0, z: 0}
   thrust: 20
 --- !u!1001 &2088332208
