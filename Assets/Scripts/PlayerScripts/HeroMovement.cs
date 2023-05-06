@@ -5,41 +5,59 @@ using UnityEngine;
 
 public class HeroMovement : MonoBehaviour
 {
-    public float velocity = 5f; // movement speed
-    public float jumpStrength = 5f; // how high
-    private bool onFloor = true;
-    private float horizontalInput;
-    private float forwardInput;
-    private Rigidbody heroRb;
+    [SerializeField]
+    public float speedIncrease = 0.1f;
+    [SerializeField]
+    public float maxSpeed = 200f;
+    [SerializeField]
+    public float rotationSpeed = 10f;
+    [SerializeField]
+    public float lift = 135f;
 
+    private float speed;
+    private float roll;
+    private float pitch;
+    private float yaw;
 
-    void Start()
-    {
-        heroRb = GetComponent<Rigidbody>();
-    }
+    Rigidbody birdRb;
 
-    void Update()
-    {
-        horizontalInput = Input.GetAxis("Horizontal"); // left right
-        forwardInput = Input.GetAxis("Vertical"); // forward backward
-
-        //Time.deltaTime updates over time to compensate for different machine speeds
-        transform.Translate(Vector3.forward * Time.deltaTime * velocity * forwardInput);
-        transform.Translate(Vector3.right * Time.deltaTime * velocity * horizontalInput);
-
-        // Jump logic
-        if (Input.GetKeyDown(KeyCode.Space) && onFloor)
-        {
-            heroRb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
-            onFloor = false; // Impulse adds instant force.
+    private float responseModifier {
+        get {
+            return (birdRb.mass / 10f) * rotationSpeed; 
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void Awake() {
+        birdRb = GetComponent<Rigidbody>();
+    }
+
+    private void HandleInputs()
     {
-        if (collision.gameObject.CompareTag("Floor"))
+        roll = Input.GetAxis("Roll");
+        pitch = Input.GetAxis("Pitch");
+        yaw = Input.GetAxis("Yaw");
+
+        if(Input.GetKey(KeyCode.Space))
         {
-            onFloor = true;
+            speed += speedIncrease;
         }
+        else if(Input.GetKey(KeyCode.LeftControl))
+        {
+            speed -= speedIncrease;
+        }
+        speed = Mathf.Clamp(speed, 0f, 100f);
+    }
+
+    private void Update() {
+        HandleInputs();
+    }
+
+    private void FixedUpdate() {
+        birdRb.AddForce(transform.right * speed);
+        birdRb.AddTorque(transform.up * yaw * rotationSpeed);
+        birdRb.AddTorque(transform.right * pitch * rotationSpeed);
+        birdRb.AddTorque(-transform.forward * roll * rotationSpeed);
+        // birdRb.AddForce(Vector3.up * birdRb.velocity.magnitude * lift);
+
     }
 }

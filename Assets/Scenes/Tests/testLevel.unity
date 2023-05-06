@@ -331,6 +331,7 @@ GameObject:
   - component: {fileID: 537988593}
   - component: {fileID: 537988592}
   - component: {fileID: 537988591}
+  - component: {fileID: 537988594}
   m_Layer: 0
   m_Name: Front
   m_TagString: Untagged
@@ -403,6 +404,19 @@ Transform:
   m_Father: {fileID: 1753023709}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &537988594
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537988589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.99999994, z: 1}
+  m_Center: {x: -0.0000000060535967, y: 0, z: 0}
 --- !u!1 &685054165 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2577672394911306800, guid: 028fe001e67d73148a1e01eaf5fd5364, type: 3}
@@ -469,8 +483,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: speed
-      value: 1500
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: target
@@ -490,7 +508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: strafeSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: tiltYMultiply
@@ -567,6 +585,10 @@ PrefabInstance:
     - target: {fileID: 3388729185391424983, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: m_Name
       value: Raven
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576108826401243486, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
+      propertyPath: m_Drag
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8576108826401243486, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: m_IsKinematic
