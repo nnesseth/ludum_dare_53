@@ -31,7 +31,6 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(transform.position, target.position);
-        print(distance+"this is distance");
 
         if (distance <= range && Time.time - lastFire >= reloadTimer)
         {
@@ -52,9 +51,5 @@ public class EnemyMovement : MonoBehaviour
 
         var arrowObj = Instantiate(arrow, transform.position, transform.rotation);
         arrowObj.GetComponent<Rigidbody>().AddForce(force, forceMode); 
-
-        //arrowObj.Velocity = Vector3.forward * arrowSpeed;
-        //print("Arrow Speed "+arrowSpeed);
-        //print("ArrowSpawner.forward "+ArrowSpawner.forward);
     }
 }
