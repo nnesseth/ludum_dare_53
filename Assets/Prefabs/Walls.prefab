@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4478223509197862946}
   - component: {fileID: 4478223509197862947}
   - component: {fileID: 4478223509197862944}
-  - component: {fileID: 4478223509197863007}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Untagged
@@ -93,23 +92,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4478223509197862945}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4478223509197863007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4478223509197862945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7addc69c60961a34b951e03a9e87db10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4478223509278146052
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +146,6 @@ GameObject:
   - component: {fileID: 4478223509416269304}
   - component: {fileID: 4478223509416269305}
   - component: {fileID: 4478223509416269310}
-  - component: {fileID: 4478223509416269301}
   m_Layer: 0
   m_Name: Start Wall
   m_TagString: Untagged
@@ -240,23 +226,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4478223509416269311}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4478223509416269301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4478223509416269311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7addc69c60961a34b951e03a9e87db10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4478223509525146561
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +243,6 @@ GameObject:
   - component: {fileID: 4478223509525146562}
   - component: {fileID: 4478223509525146563}
   - component: {fileID: 4478223509525146560}
-  - component: {fileID: 4478223509525146623}
   m_Layer: 0
   m_Name: Left Wall
   m_TagString: Untagged
@@ -350,23 +323,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4478223509525146561}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4478223509525146623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4478223509525146561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7addc69c60961a34b951e03a9e87db10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4478223509782458492
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +340,6 @@ GameObject:
   - component: {fileID: 4478223509782458489}
   - component: {fileID: 4478223509782458494}
   - component: {fileID: 4478223509782458495}
-  - component: {fileID: 4478223509782458491}
   m_Layer: 0
   m_Name: Restart Wall
   m_TagString: Untagged
@@ -460,23 +420,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4478223509782458492}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4478223509782458491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4478223509782458492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7addc69c60961a34b951e03a9e87db10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4478223509844660192
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +437,6 @@ GameObject:
   - component: {fileID: 4478223509844659997}
   - component: {fileID: 4478223509844660194}
   - component: {fileID: 4478223509844660195}
-  - component: {fileID: 4478223509844659998}
   m_Layer: 0
   m_Name: Right Wall
   m_TagString: Untagged
@@ -570,23 +517,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4478223509844660192}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4478223509844659998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4478223509844660192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7addc69c60961a34b951e03a9e87db10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8894622587880184463
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +534,6 @@ GameObject:
   - component: {fileID: 5606844313497862118}
   - component: {fileID: 481800547449833107}
   - component: {fileID: 2500009995579457575}
-  - component: {fileID: 2156810003866082663}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -680,20 +614,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8894622587880184463}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2156810003866082663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8894622587880184463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7addc69c60961a34b951e03a9e87db10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
