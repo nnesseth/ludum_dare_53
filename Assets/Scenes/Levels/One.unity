@@ -3351,11 +3351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: speed
-      value: 30000
+      value: 50000
       objectReference: {fileID: 0}
     - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: strafeSpeed
-      value: 30000
+      value: 50000
       objectReference: {fileID: 0}
     - target: {fileID: 1211673411993994275, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: m_RootOrder
