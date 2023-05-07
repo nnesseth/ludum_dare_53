@@ -238,7 +238,7 @@ TerrainCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83609146}
   m_Material: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: a4bb4077396f7704ea8414c013867941, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &83609149
@@ -3722,11 +3722,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: speed
-      value: 250000
+      value: 50000
       objectReference: {fileID: 0}
     - target: {fileID: 891471809819069110, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: strafeSpeed
-      value: 200000
+      value: 50000
       objectReference: {fileID: 0}
     - target: {fileID: 1211673411993994275, guid: 1be6613f201df5f4291fa4e01f30f979, type: 3}
       propertyPath: m_RootOrder
